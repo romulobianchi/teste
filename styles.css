@@ -126,7 +126,7 @@ main {
     border: 3px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: absolute;
-    top: -110px;
+    top: -115px;
     left: 50%;
     transform: translateX(100px) translateX(-50%);
     opacity: 0;
