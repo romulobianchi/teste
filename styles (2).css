@@ -1,0 +1,213 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+img {
+    margin: 0 0;
+}
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Ensure container occupies the full height */
+}
+
+header {
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.8); /* Dark gray with transparency */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Allow main to take up the remaining space */
+    margin-top: 80px; /* Space for the fixed header */
+    padding: 20px;
+    width: 100%;
+}
+
+.card_pai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+    padding: 20px;
+}
+
+.card {
+    align-items: center;
+    background-color: rgba(250, 246, 244, 0.8); /* White with transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    max-width: 960px;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInLeft 1s ease-out forwards 0.5s;
+}
+.conteiner_botoes {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */ 
+    /* background-color: rgba(255, 255, 255, 0.6); /* White with transparency */ 
+    padding: 20px; 
+    /* border-radius: 10px;*/ 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */ 
+    text-align: center;
+    max-width: 250px;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    margin: 0 auto;
+    transform: translateX(-100px);
+    animation: slideInLeft 1s ease-out forwards 0.5s;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -85px;
+    left: 50%;
+    transform: translateX(100px) translateX(-50%);
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards 0.5s;
+}
+
+h1 {
+    font-size: 24px;
+    color: #301b3c;
+    margin: 60px 0 10px;
+    text-align: center;
+}
+h2 {
+    font-size: 18px;
+    color: #301b3c;
+    margin: 10px 0 10px;
+    text-align: center;
+}
+h3 {
+    font-size: 15px;
+    color: #301b3c;
+    margin: 10px 0 10px;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    color: #301b3c;
+    margin: 20 0 10px;
+    margin-top: 20px;
+    text-indent: 2em;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #b9c2d2; /* Button background color */
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+    margin: 10px 0;
+}
+
+.card a:hover {
+    background-color: #0056b3; /* Button hover color */
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.7); /* Dark gray with transparency */
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Animations */
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
